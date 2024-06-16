@@ -1,0 +1,71 @@
+.card {
+    width: 16rem;
+    height: 15rem;
+    border-radius: 40px;
+    background-color: rgb(240, 240, 240);
+    position: relative;
+    cursor: pointer;
+  &:hover{
+   // border: 4px solid rgb(220, 220, 220);
+    box-shadow: 0 30px 40px rgba(0,0,0,.5);
+  }
+    hr {
+      background-color: rgb(127, 127, 127) !important;
+      color: rgb(127, 127, 127);
+      border-top-color: rgb(127, 127, 127);
+      border-right-color: rgb(127, 127, 127);
+      border-bottom-color: rgb(127, 127, 127);
+      border-left-color: rgb(127, 127, 127);
+      height: 1px;
+      position: relative !important;
+    }
+  
+    .top-of-card {
+      height: 15%;
+     // position: relative; 
+  
+      #date {
+        font-size: 9px;
+        color: rgb(154, 154, 154);
+        //position: absolute;
+       text-align: right;
+       padding-top: 14px;
+       padding-right:15px;
+
+      }
+    }
+    .bottom-of-card{
+
+    }
+  }
+  
+  .link {
+    width: 256px !important;
+    height: 15rem;
+    text-decoration: none !important;
+    color: black;
+  }
+#title{
+    text-align: center;
+    margin:5px;
+    padding-top: 5px;
+    font-size: 15;
+    font-weight: bold;
+}
+  #notebody{
+    padding:10px 20px 8px;
+    margin:5px;
+    font-size: 13px;
+    text-align: justify;
+  }
+
+  #username{
+    font-size: 10px;
+    color:gray;
+    text-align: left;
+    margin-bottom: 15px;
+    //margin-left:15px;
+    //padding:0px 5px 10px;
+    //padding-top: 14px;
+    padding-left:15px;
+  }
