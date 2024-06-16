@@ -31,6 +31,7 @@
        text-align: right;
        padding-top: 14px;
        padding-right:15px;
+       margin-left:25px;
 
       }
     }
@@ -43,7 +44,7 @@
     width: 256px !important;
     height: 15rem;
     text-decoration: none !important;
-    color: black;
+    
   }
 #title{
     text-align: center;
@@ -51,12 +52,16 @@
     padding-top: 5px;
     font-size: 15;
     font-weight: bold;
+    color:black;
+    text-decoration: none !important;
 }
   #notebody{
     padding:10px 20px 8px;
     margin:5px;
     font-size: 13px;
     text-align: justify;
+    color:black;
+    text-decoration: none !important;
   }
 
   #username{
