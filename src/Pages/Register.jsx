@@ -51,20 +51,19 @@ function Register() {
         <input type="text" name="email" value={user.email} onChange={handleChange} placeholder='Email' />
         <label htmlFor="password"></label>
         <input type="password" name="password" value={user.password} onChange={handleChange} placeholder='Password' />
-        <label htmlFor="first-name"></label>
-        <input type="text" name="first-name" value={user.firstName} onChange={handleChange} placeholder='First Name' />
-        <label htmlFor="last-name"></label>
-        <input type="text" name="last-name" value={user.lastName} onChange={handleChange} placeholder='Last Name' /> 
+        <label htmlFor="firstName"></label>
+        <input type="text" name="firstName" value={user.firstName} onChange={handleChange} placeholder='First Name' />
+        <label htmlFor="lastName"></label>
+        <input type="text" name="lastName" value={user.lastName} onChange={handleChange} placeholder='Last Name' /> 
         <button type="submit">Sign Up</button>
         {showSuccessMessage && (
-        alert("Account created!")
-      )}
-      {errorMessage && (
-        <div className="error-message">{errorMessage}</div>
-      )}
+          alert("Account created!")
+        )}
+        {errorMessage && (
+          <div className="error-message">{errorMessage}</div>
+        )}
         <a id="redirect-link" href="/login">Already have an account?</a>
       </form>
-     
     </div>
   );
 }
