@@ -1,32 +1,35 @@
 import React, { useState } from 'react';
 import './NotesCard.scss';
 import NotesPopup from './NotesPopup';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 
 const NotesCard = ({ note }) => {
   const [popupVisible, setPopupVisible] = useState(false);
 
   const togglePopup = () => {
-    setPopupVisible(!popupVisible); // Odwróć stan widoczności popupa
+    setPopupVisible(!popupVisible);
+  };
+
+  const closePopup = () => {
+    setPopupVisible(false);
   };
 
   return (
-    <div className='card' onClick={togglePopup}> {/* Obsługa kliknięcia na dowolnym miejscu w karcie */}
+    <div className='card' onClick={togglePopup}>
       <div className="top-of-card">
-        <p id="date">16.06.2024</p>
+        <p id="date">{note?.CreatedAt || 'No Date Available'}</p> {/* do wyrzucenia */}
       </div>
       <hr />
       <div className='bottom-of-card'>
-        <p id="title">Notatki z chemii</p>
-        <p id="notebody">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation.  Ut enim ad minim veniam, quis nostrud exercitation 
-        </p>
+        <p id="title">{note?.title || 'No Title'}</p> 
+        <p id="notebody">{note?.noteBody?.substring(0, 225) + "..." || 'No Content'}</p> 
       </div>
       
-      {popupVisible && <NotesPopup note={note} onClose={() => setPopupVisible(false)} />} {/* Wyświetl popup gdy popupVisible jest true */}
+      {popupVisible && <NotesPopup note={note} onClose={closePopup} />} 
     </div>
   );
 };
 
 export default NotesCard;
+
 
