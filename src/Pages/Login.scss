@@ -16,6 +16,10 @@
         padding: 20px;
         width: 50%;
         height: 60%;
+        transition: box-shadow 0.3s ease; 
+        &:hover{
+            box-shadow: 0  30px 40px rgba(0,0,0,.2);
+          }
 
         input{
             background-color: rgba(130, 203, 240, 0);
