@@ -25,9 +25,11 @@ function Login() {
     <div className="body">
        <div className="login">
       <form onSubmit={handleSubmit}>
+      <hr id="hr"/>
         <div className="form-group">
-          
+        
         </div>
+       
         <h1 className="signin">Sign In</h1>
         <label htmlFor=""></label>
         <input
@@ -44,7 +46,7 @@ function Login() {
           type="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Sign In</button>
+        <button type="submit">Sign in</button>
         {error && error}
         <a id="redirect-link"href="/register">Don't have an account?</a>
 

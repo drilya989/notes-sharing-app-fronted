@@ -33,13 +33,14 @@
   
   #close-btn {
     border-radius: 9px;
-    background-color: rgb(79, 70, 108);
+    background-color: rgb(89, 187, 240);
+    border:none;
     width: 5rem;
     height: 1.5rem;
     color: white;
     cursor: pointer;
     &:hover {
-      background-color: rgb(131, 122, 160);
+      background-color: rgb(62, 136, 221);
     }
   }
   
