@@ -3,7 +3,7 @@ import './NotesCard.scss';
 import NotesPopup from './NotesPopup';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 
-const NotesCard = ({ note }) => {
+const NotesCard = ({ note, onDelete }) => {
   const [popupVisible, setPopupVisible] = useState(false);
 
   const togglePopup = () => {
@@ -17,7 +17,7 @@ const NotesCard = ({ note }) => {
   return (
     <div className='card' onClick={togglePopup}>
       <div className="top-of-card">
-        <p id="date">{note?.CreatedAt || 'No Date Available'}</p> {/* do wyrzucenia */}
+        <p id="university">{note?.university}</p> 
       </div>
       <hr />
       <div className='bottom-of-card'>
@@ -25,7 +25,7 @@ const NotesCard = ({ note }) => {
         <p id="notebody">{note?.noteBody?.substring(0, 225) + "..." || 'No Content'}</p> 
       </div>
       
-      {popupVisible && <NotesPopup note={note} onClose={closePopup} />} 
+      {popupVisible && <NotesPopup note={note} onClose={closePopup} onDelete={onDelete} />} 
     </div>
   );
 };

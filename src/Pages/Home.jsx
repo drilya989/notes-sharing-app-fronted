@@ -28,6 +28,10 @@ const Home = () => {
     fetchNotes();
   }, []);
 
+  const handleDelete = (deletedNoteId) => {
+    setNotes((prevNotes) => prevNotes.filter(note => note._id !== deletedNoteId));
+  };
+
   return (
     <div>
       <Navbar />
@@ -40,10 +44,11 @@ const Home = () => {
         ) : error ? (
           "Something went wrong"
         ) : (
-          data.map((note) => (
+          notes.map((note) => (
             <NotesCard
               key={note._id}
-              note={note}  
+              note={note}
+              onDelete={handleDelete}
             />
           ))
         )}

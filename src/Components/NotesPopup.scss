@@ -50,11 +50,22 @@
    // padding: 0 2rem; 
   }
   
-  #date {
-    margin: 0;
-    
-  }
   
-  #username {
+  #university {
     margin: 0;
+    padding:10px;
   }
+
+
+.delete-icon {
+  cursor: pointer;
+  color: red;
+}
+
+.delete-icon:hover {
+  color: darkred;
+}
+
+#close-btn {
+  margin-top: 1rem;
+}
